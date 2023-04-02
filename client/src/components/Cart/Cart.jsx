@@ -48,8 +48,8 @@ const Cart = () => {
         </div>
       ))}
       <div className="total">
-        <span>SUBTOTAL</span>
-        <span>${totalPrice()}</span>
+        <span>SUB-TOTAL</span>
+        <span>₹{totalPrice()}</span>
       </div>
       <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>Reset Cart</span>
