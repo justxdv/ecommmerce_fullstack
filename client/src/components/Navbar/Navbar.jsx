@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Cart from "../Cart/Cart";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./navbar.scss";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Logout } from "@mui/icons-material";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
+  const {loginWithRedirect, logout, isAuthenticated, user} = useAuth0();
 
   return (
     <div className="navbar">
@@ -61,15 +62,20 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/">
+            <Link className="link" to="/contact">
               Contact
             </Link>
           </div>
 
           <div className="icons">
-            <SearchIcon />
-            <PersonOutlineOutlinedIcon />
-            <FavoriteBorderOutlinedIcon />
+            {
+              isAuthenticated && <p>{user.name}</p>
+            }
+            {
+              isAuthenticated ?
+              <Logout onClick={() => logout({returnTo: window.location.origin})}/>
+              :<PersonOutlineOutlinedIcon onClick={() => loginWithRedirect()} />
+            }
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>

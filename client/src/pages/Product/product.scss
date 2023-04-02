@@ -28,6 +28,8 @@
       }
     }
   }
+  
+  
   .right {
     flex: 1;
     display: flex;
@@ -76,26 +78,9 @@
       font-weight: 500;
     }
 
-    .links{
-      display: flex;
-      gap: 20px;
+    
 
-      .item{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #2879fe;
-        font-size: 14px;
-      }
-    }
-
-    .info{
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      color: gray;
-      font-size: 14px;
-      margin-top: 30px;
+    
 
       hr{
         width: 200px;
@@ -108,4 +93,3 @@
     }
 
   }
-}

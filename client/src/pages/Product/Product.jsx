@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./product.scss";
 import {useParams} from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import BalanceIcon from "@mui/icons-material/Balance";
 import {useDispatch} from "react-redux";
 import useFetch from "../../hooks/useFetch";
 import {addToCart} from "../../redux/cartReducer";
@@ -71,31 +69,12 @@ const Product = () => {
               <AddShoppingCartIcon />
               ADD TO CART
             </button>
-            <div className="links">
-              <div className="item">
-                <FavoriteBorderIcon />
-                ADD TO WISH LIST
-              </div>
-              <div className="item">
-                <BalanceIcon />
-                ADD TO COMPARE
-              </div>
-            </div>
-            <div className="info">
-              <span>Vendor: Polo</span>
-              <span>Product Type: T-Shirt</span>
-              <span>Tag: T-Shirt, Women, Top</span>
-            </div>
+            
+            
 
             <hr />
 
-            <div className="info">
-              <span>DESCRIPTION</span>
-              <hr />
-              <span>ADDITIONAL INFORMATION</span>
-              <hr />
-              <span>FAQ</span>
-            </div>
+            
           </div>
         </>
       )}
