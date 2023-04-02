@@ -38,11 +38,14 @@ Before you begin, make sure you have the following installed:
  3. Install the required dependencies for both the API (Strapi) and the client (React.js) by running the following commands in the terminal:
 
   cd api
+  
   npm install
-    cd ../client
-npm install
+  
+  cd ../client
+  
+  npm install
 
- ##Running the Application
+ ## Running the Application
 
 Open a terminal in Visual Studio Code and change the directory to api:
 
