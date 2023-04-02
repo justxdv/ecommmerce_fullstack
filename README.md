@@ -52,15 +52,19 @@ Before you begin, make sure you have the following installed:
 cd api
 
 - Run the Strapi backend server:
-npm run develop
-This will start the Strapi server at http://localhost:1337.
+
+   npm run develop
+   
+   This will start the Strapi server at http://localhost:1337.
 
 - Open a new terminal in Visual Studio Code and change the directory to client:
 
 cd client
 
 - Run the React.js frontend:
-npm start
-This will start the React app at http://localhost:3000.
+
+   npm start
+   
+   This will start the React app at http://localhost:3000.
 
 ### Now, you can access the full-stack e-commerce application in your browser at http://localhost:3000.
