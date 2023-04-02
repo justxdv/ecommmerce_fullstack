@@ -50,16 +50,16 @@ Before you begin, make sure you have the following installed:
 - Open a terminal in Visual Studio Code and change the directory to api:
 
 cd api
-Run the Strapi backend server:
 
+- Run the Strapi backend server:
 npm run develop
 This will start the Strapi server at http://localhost:1337.
 
 - Open a new terminal in Visual Studio Code and change the directory to client:
 
 cd client
-Run the React.js frontend:
 
+- Run the React.js frontend:
 npm start
 This will start the React app at http://localhost:3000.
 
